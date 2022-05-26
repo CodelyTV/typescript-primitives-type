@@ -1,22 +1,25 @@
 {
-  "name": "typescript-basic-skeleton",
-  "version": "2.0.0",
-  "description": "Bootstrap your new TypeScript project with the bare minimum dependencies",
+  "name": "@codelytv/primitives-type",
+  "version": "1.0.2",
+  "description": "Type entities primitives from value objects",
   "scripts": {
+    "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodelyTV/typescript-basic-skeleton.git"
+    "url": "git+https://github.com/CodelyTV/typescript-primitives-type"
   },
   "author": "codelytv",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/CodelyTV/typescript-basic-skeleton/issues"
+    "url": "https://github.com/CodelyTV/typescript-primitives-type/issues"
   },
-  "homepage": "https://github.com/CodelyTV/typescript-basic-skeleton#readme",
+  "homepage": "https://github.com/CodelyTV/typescript-primitives-type#readme",
   "devDependencies": {
     "@swc/core": "^1.2.172",
     "@swc/jest": "^0.2.20",
