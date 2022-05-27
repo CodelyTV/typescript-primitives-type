@@ -1,7 +1,8 @@
 {
   "name": "@codelytv/primitives-type",
-  "version": "1.0.2",
-  "description": "Type entities primitives from value objects",
+  "version": "1.0.3",
+  "description": "Type entity primitives from value objects",
+  "keywords": ["typescript", "type", "toPrimitive", "Primitives", "ts", "types", "utility", "util", "utilities"],
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ignore-path .gitignore . --ext .ts",
