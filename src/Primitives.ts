@@ -10,8 +10,8 @@ type Properties<T> = Omit<MethodsAndProperties<T>, Methods<T>>;
 type ValueObjectValue<T> = {
   [key in keyof T]: T[key] extends { value: unknown }
     ? Pick<T[key], "value">["value"]
-    : T[key] extends Array<Object>
-    ? Primitives<T[key][number]>[]
+    : T[key] extends Array<{ value: unknown }>
+    ? Pick<T[key][number], "value">["value"][]
     : T[key] extends Object
     ? Primitives<T[key]>
     : T[key];
