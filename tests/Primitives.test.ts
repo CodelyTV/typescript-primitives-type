@@ -1,14 +1,41 @@
+import { expectTypeOf } from "expect-type";
+
+import { Primitives } from "../src/Primitives";
 import { Course } from "./Course";
-import { CourseId } from "./CourseId";
+import { Learner } from "./Learner";
+import { User } from "./User";
 
 describe("Primitives", () => {
   it("should ensure to only return primitive properties excluding methods", () => {
-    const course = new Course(new CourseId("course-id"));
+    type actualPrimitives = Primitives<Course>;
 
-    const actualPrimitives = course.toPrimitives();
+    type expectedPrimitives = {
+      readonly courseId: string;
+    };
 
-    const expectedPrimitives = { courseId: "course-id" };
+    expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
+  });
 
-    expect(actualPrimitives).toEqual(expectedPrimitives);
+  it("should get primitive array type from value object array", () => {
+    type actualPrimitives = Primitives<Learner>;
+
+    type expectedPrimitives = {
+      readonly enrolledCourses: string[];
+    };
+
+    expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
+  });
+
+  it("should generate nested primitive object", () => {
+    type actualPrimitives = Primitives<User>;
+
+    type expectedPrimitives = {
+      readonly address: {
+        readonly city: string;
+        readonly street: string;
+      };
+    };
+
+    expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
   });
 });
