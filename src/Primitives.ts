@@ -3,6 +3,8 @@ type Methods<T> = {
   [P in keyof T]: T[P] extends Function ? P : never;
 }[keyof T];
 
+type Nullable<T> = T | null;
+
 type MethodsAndProperties<T> = { [key in keyof T]: T[key] };
 
 type Properties<T> = Omit<MethodsAndProperties<T>, Methods<T>>;
@@ -17,4 +19,4 @@ type ValueObjectValue<T> = {
     : T[key];
 };
 
-export type Primitives<T> = ValueObjectValue<Properties<T>>;
+export type Primitives<T> = ValueObjectValue<Properties<Nullable<T>>>;

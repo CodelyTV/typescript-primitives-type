@@ -88,6 +88,41 @@ Done! ✌️
 
 The `Primitives<Course>` return type is ensuring all our restrictions in a very straighforward way! 🌈
 
+## ❔ Nullable properties support
+
+The `Primitives<T>` type also supports nullable properties. 
+
+Let's say we add a `teacherId` to our `Course`, which can be null:
+
+```typescript
+import { Primitives } from "@codelytv/primitives-type";
+
+import { CourseId } from "./CourseId";
+import { CourseTitle } from "./CourseTitle";
+import { TeacherId } from "./TeacherId";
+
+export class Course {
+  constructor(readonly courseId: CourseId, readonly courseTitle: CourseTitle, readonly teacherId: TeacherId | null) {
+  }
+
+  updateTitle(newCourseTitle: CourseTitle): void {
+    this.courseTitle = newCourseTitle;
+  }
+
+  someOtherMethodWithDomainLogic(): void {
+    // some algorithm
+  }
+
+  toPrimitives(): Primitives<Course> {
+    return {
+      courseId: this.courseId.value,
+      courseTitle: this.courseTitle.value,
+      teacherId: this.teacherId?.value ?? null // <- Nullable property
+    };
+  }
+}
+```
+
 # 👍 How to install
 
 - Npm: `npm install |--save-dev @codelytv/primitives-type`
