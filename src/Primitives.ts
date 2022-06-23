@@ -1,3 +1,5 @@
+import { Address } from "../tests/Address";
+
 /* eslint-disable @typescript-eslint/ban-types */
 type Methods<T> = {
   [P in keyof T]: T[P] extends Function ? P : never;
@@ -12,6 +14,8 @@ type ValueObjectValue<T> = {
     ? Pick<T[key], "value">["value"]
     : T[key] extends Array<{ value: unknown }>
     ? Pick<T[key][number], "value">["value"][]
+    : T[key] extends Array<Object>
+    ? Primitives<T[key][number]>[]
     : T[key] extends Object
     ? Primitives<T[key]>
     : T[key];

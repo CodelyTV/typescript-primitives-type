@@ -1,6 +1,6 @@
 {
   "name": "@codelytv/primitives-type",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Type entity primitives from value objects",
   "keywords": [
     "typescript",

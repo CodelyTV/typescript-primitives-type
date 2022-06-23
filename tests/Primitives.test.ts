@@ -2,6 +2,7 @@ import { expectTypeOf } from "expect-type";
 
 import { Primitives } from "../src/Primitives";
 import { Course } from "./Course";
+import { DeliveryInfo } from "./DeliveryInfo";
 import { Learner } from "./Learner";
 import { User } from "./User";
 
@@ -34,6 +35,19 @@ describe("Primitives", () => {
         readonly city: string;
         readonly street: string;
       };
+    };
+
+    expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
+  });
+
+  it("should generate nested primitive type from array of value objects prop", () => {
+    type actualPrimitives = Primitives<DeliveryInfo>;
+
+    type expectedPrimitives = {
+      readonly addresses: {
+        readonly city: string;
+        readonly street: string;
+      }[];
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
