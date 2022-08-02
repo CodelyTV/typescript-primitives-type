@@ -10,7 +10,7 @@
 
 <p align="center">
     <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="Codely Open Source"/></a>
-    <a href="https://pro.codely.tv"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
+    <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
 </p>
 
 <p align="center">
@@ -99,7 +99,7 @@ Publishing this package we are committing ourselves to the following code qualit
 
 - 🤝 Respect **Semantic Versioning**: No breaking changes in patch or minor versions
 - 🤏 No surprises in transitive dependencies: Use the **bare minimum dependencies** needed to meet the purpose
-- 🎯 **One specific purpose** to met without having to carry a bunch of unnecessary other utilities
+- 🎯 **One specific purpose** to meet without having to carry a bunch of unnecessary other utilities
 - ✅ **Tests** as documentation and usage examples
 - 📖 **Well documented ReadMe** showing how to install and use
 - ⚖️ **License favoring Open Source** and collaboration
@@ -108,11 +108,11 @@ Publishing this package we are committing ourselves to the following code qualit
 
 ## ☝️ Learning resources
 
-- [🚜 TypeScript Avanzado: Más allá de any](https://pro.codely.tv/library/typescript-avanzado-mas-alla-de-any-182513/418230/about/) (Spanish - Course)
+- [🚜 TypeScript Avanzado: Más allá de any](https://pro.codely.com/library/typescript-avanzado-mas-alla-de-any-182513/418230/about/) (Spanish - Course)
 - [📂 DDD en TypeScript: Estructura de carpetas](https://youtu.be/AJJRk7qmVHg) (Spanish - YouTube video)
-- [🔖 Domain-Driven Design en TypeScript](https://pro.codely.tv/library/ddd-en-typescript-modelado-y-arquitectura-172533/375662/about/) (Spanish - Course)
-- [🐥 JavaScript moderno: Buenas prácticas para empezar y refactorizar aplicaciones](https://pro.codely.tv/library/javascript-moderno-buenas-practicas-para-empezar-y-refactorizar-aplicaciones-69571/208928/about/) (Spanish - Course)
-- [🏗️ De JavaScript a TypeScript](https://pro.codely.tv/library/de-javascript-a-typescript-128106/347481/about/) (Spanish - Course)
+- [🔖 Domain-Driven Design en TypeScript](https://pro.codely.com/library/ddd-en-typescript-modelado-y-arquitectura-172533/375662/about/) (Spanish - Course)
+- [🐥 JavaScript moderno: Buenas prácticas para empezar y refactorizar aplicaciones](https://pro.codely.com/library/javascript-moderno-buenas-practicas-para-empezar-y-refactorizar-aplicaciones-69571/208928/about/) (Spanish - Course)
+- [🏗️ De JavaScript a TypeScript](https://pro.codely.com/library/de-javascript-a-typescript-128106/347481/about/) (Spanish - Course)
 
 ## 🔷 TypeScript skeletons
 
