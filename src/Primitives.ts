@@ -1,5 +1,3 @@
-import { Address } from "../tests/Address";
-
 /* eslint-disable @typescript-eslint/ban-types */
 type Methods<T> = {
   [P in keyof T]: T[P] extends Function ? P : never;
