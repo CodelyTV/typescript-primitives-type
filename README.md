@@ -30,7 +30,7 @@ import { CourseId } from "./CourseId";
 import { CourseTitle } from "./CourseTitle";
 
 export class Course {
-  constructor(courseId: CourseId, courseTitle: CourseTitle) {}
+  constructor(public courseId: CourseId, public courseTitle: CourseTitle) {}
 
   updateTitle(newCourseTitle: CourseTitle): void {
     this.courseTitle = newCourseTitle;
@@ -65,7 +65,7 @@ import { CourseId } from "./CourseId";
 import { CourseTitle } from "./CourseTitle";
 
 export class Course {
-  constructor(courseId: CourseId, courseTitle: CourseTitle) {}
+  constructor(public courseId: CourseId, public courseTitle: CourseTitle) {}
 
   updateTitle(newCourseTitle: CourseTitle): void {
     this.courseTitle = newCourseTitle;
