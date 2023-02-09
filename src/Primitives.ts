@@ -7,16 +7,20 @@ type MethodsAndProperties<T> = { [key in keyof T]: T[key] };
 
 type Properties<T> = Omit<MethodsAndProperties<T>, Methods<T>>;
 
-type ValueObjectValue<T> = {
-  [key in keyof T]: T[key] extends { value: unknown }
-    ? Pick<T[key], "value">["value"]
-    : T[key] extends Array<{ value: unknown }>
-    ? Pick<T[key][number], "value">["value"][]
-    : T[key] extends Array<Object>
-    ? Primitives<T[key][number]>[]
-    : T[key] extends Object
-    ? Primitives<T[key]>
-    : T[key];
-};
+type PrimitiveTypes = string | number | boolean | Date | undefined | null;
 
-export type Primitives<T> = ValueObjectValue<Properties<T>>;
+type ValueObjectValue<T> = T extends PrimitiveTypes
+  ? T
+  : T extends { value: infer U }
+  ? U
+  : T extends Array<{ value: infer U }>
+  ? U[]
+  : T extends Array<infer U>
+  ? Array<ValueObjectValue<U>>
+  : T extends { [K in keyof Properties<T>]: infer U }
+  ? { [K in keyof Properties<T>]: ValueObjectValue<U> }
+  : never;
+
+export type Primitives<T> = {
+  [key in keyof Properties<T>]: ValueObjectValue<T[key]>;
+};
