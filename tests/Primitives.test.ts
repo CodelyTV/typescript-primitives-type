@@ -36,6 +36,7 @@ describe("Primitives", () => {
       readonly address: {
         readonly city: string;
         readonly street: string;
+        readonly number: number;
       };
     };
 
@@ -49,6 +50,7 @@ describe("Primitives", () => {
       readonly addresses: {
         readonly city: string;
         readonly street: string;
+        readonly number: number;
       }[];
     };
 
