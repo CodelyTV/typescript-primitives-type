@@ -1,4 +1,4 @@
-import { Primitives } from "../src/Primitives";
+import { Primitives } from "../src";
 import { City } from "./City";
 import { Street } from "./Street";
 
