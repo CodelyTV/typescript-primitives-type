@@ -90,7 +90,7 @@ The `Primitives<Course>` return type is ensuring all our restrictions in a very 
 
 # 👍 How to install
 
-- Npm: `npm install |--save-dev @codelytv/primitives-type`
+- Npm: `npm install --save-dev @codelytv/primitives-type`
 - Yarn: `yarn add -D @codelytv/primitives-type`
 
 # 👌 Codely Code Quality Standards
