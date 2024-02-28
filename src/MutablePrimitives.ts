@@ -5,7 +5,11 @@ type Methods<T> = {
 
 type MethodsAndProperties<T> = { [key in keyof T]: T[key] };
 
-type Properties<T> = Omit<MethodsAndProperties<T>, Methods<T>>;
+type NonReadonly<T> = {
+  -readonly [P in keyof T]: T[P];
+};
+
+type Properties<T> = Omit<MethodsAndProperties<NonReadonly<T>>, Methods<T>>;
 
 type PrimitiveTypes = string | number | boolean | Date | undefined | null;
 
@@ -21,6 +25,6 @@ type ValueObjectValue<T> = T extends PrimitiveTypes
   ? { [K in keyof Properties<T>]: ValueObjectValue<Properties<T>[K]> }
   : never;
 
-export type Primitives<T> = {
+export type MutablePrimitives<T> = {
   [key in keyof Properties<T>]: ValueObjectValue<T[key]>;
 };
