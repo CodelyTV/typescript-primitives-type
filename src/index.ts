@@ -1,4 +1,4 @@
-import { Primitives } from "./Primitives";
 import { MutablePrimitives } from "./MutablePrimitives";
+import { Primitives } from "./Primitives";
 
-export { Primitives, MutablePrimitives };
+export { MutablePrimitives, Primitives };

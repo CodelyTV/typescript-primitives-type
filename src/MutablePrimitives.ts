@@ -16,14 +16,14 @@ type PrimitiveTypes = string | number | boolean | Date | undefined | null;
 type ValueObjectValue<T> = T extends PrimitiveTypes
   ? T
   : T extends { value: infer U }
-    ? U
-    : T extends Array<{ value: infer U }>
-      ? U[]
-      : T extends Array<infer U>
-        ? Array<ValueObjectValue<U>>
-        : T extends { [K in keyof Properties<T>]: infer U }
-          ? { [K in keyof Properties<T>]: ValueObjectValue<Properties<T>[K]> }
-          : never;
+  ? U
+  : T extends Array<{ value: infer U }>
+  ? U[]
+  : T extends Array<infer U>
+  ? Array<ValueObjectValue<U>>
+  : T extends { [K in keyof Properties<T>]: unknown }
+  ? { [K in keyof Properties<T>]: ValueObjectValue<Properties<T>[K]> }
+  : never;
 
 export type MutablePrimitives<T> = {
   [key in keyof Properties<T>]: ValueObjectValue<T[key]>;

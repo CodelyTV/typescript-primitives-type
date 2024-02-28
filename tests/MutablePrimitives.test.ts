@@ -1,4 +1,5 @@
 import { expectTypeOf } from "expect-type";
+
 import { MutablePrimitives } from "../src";
 import { Course } from "./Course";
 import { DeliveryInfo } from "./DeliveryInfo";
@@ -12,7 +13,7 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<Course>;
 
     type expectedPrimitives = {
-       courseId: string;
+      courseId: string;
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
@@ -22,7 +23,7 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<Learner>;
 
     type expectedPrimitives = {
-       enrolledCourses: string[];
+      enrolledCourses: string[];
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
@@ -32,10 +33,10 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<User>;
 
     type expectedPrimitives = {
-       address: {
-         city: string;
-         street: string;
-         number: number;
+      address: {
+        city: string;
+        street: string;
+        number: number;
       };
     };
 
@@ -46,10 +47,10 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<DeliveryInfo>;
 
     type expectedPrimitives = {
-       addresses: {
-         city: string;
-         street: string;
-         number: number;
+      addresses: {
+        city: string;
+        street: string;
+        number: number;
       }[];
     };
 
@@ -60,8 +61,8 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<Product>;
 
     type expectedPrimitives = {
-       active: boolean;
-       createdAt: Date;
+      active: boolean;
+      createdAt: Date;
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
@@ -71,9 +72,9 @@ describe("MutablePrimitives", () => {
     type actualPrimitives = MutablePrimitives<Video>;
 
     type expectedPrimitives = {
-       id: string;
-       name: string | undefined;
-       duration: number | undefined;
+      id: string;
+      name: string | undefined;
+      duration: number | undefined;
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();

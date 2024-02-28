@@ -17,7 +17,7 @@ type ValueObjectValue<T> = T extends PrimitiveTypes
   ? U[]
   : T extends Array<infer U>
   ? Array<ValueObjectValue<U>>
-  : T extends { [K in keyof Properties<T>]: infer U }
+  : T extends { [K in keyof Properties<T>]: unknown }
   ? { [K in keyof Properties<T>]: ValueObjectValue<Properties<T>[K]> }
   : never;
 
