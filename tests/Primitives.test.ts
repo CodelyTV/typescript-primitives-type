@@ -81,7 +81,7 @@ describe("Primitives", () => {
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
   });
 
-  it("should infer the primitive properties from metadata", () => {
+  it("should infer properties with unknown type", () => {
     type actualPrimitives = Primitives<Metadata>;
 
     type expectedPrimitives = {
