@@ -4,6 +4,7 @@ import { Primitives } from "../src";
 import { Course } from "./Course";
 import { DeliveryInfo } from "./DeliveryInfo";
 import { Learner } from "./Learner";
+import { Metadata } from "./Metadata";
 import { Product } from "./Product";
 import { User } from "./User";
 import { Video } from "./Video";
@@ -75,6 +76,16 @@ describe("Primitives", () => {
       readonly id: string;
       readonly name: string | undefined;
       readonly duration: number | undefined;
+    };
+
+    expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
+  });
+
+  it("should infer properties with unknown type", () => {
+    type actualPrimitives = Primitives<Metadata>;
+
+    type expectedPrimitives = {
+      readonly data: Record<string, unknown>;
     };
 
     expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
