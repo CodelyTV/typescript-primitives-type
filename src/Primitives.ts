@@ -19,6 +19,8 @@ type ValueObjectValue<T> = T extends PrimitiveTypes
   ? Array<ValueObjectValue<U>>
   : T extends { [K in keyof Properties<T>]: unknown }
   ? { [K in keyof Properties<T>]: ValueObjectValue<Properties<T>[K]> }
+  : T extends unknown
+  ? T
   : never;
 
 export type Primitives<T> = {

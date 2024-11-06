@@ -1,6 +1,6 @@
 {
   "name": "@codelytv/primitives-type",
-  "version": "1.0.6",
+  "version": "1.1.1",
   "description": "Type entity primitives from value objects",
   "keywords": [
     "typescript",
@@ -19,8 +19,8 @@
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodelyTV/typescript-primitives-type"
