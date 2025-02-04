@@ -6,6 +6,7 @@ import { DeliveryInfo } from "./DeliveryInfo";
 import { Learner } from "./Learner";
 import { Metadata } from "./Metadata";
 import { Product } from "./Product";
+import { Step } from "./Step";
 import { User } from "./User";
 import { Video } from "./Video";
 
@@ -63,7 +64,18 @@ describe("Primitives", () => {
 
 		type expectedPrimitives = {
 			readonly active: boolean;
-			readonly createdAt: Date;
+			readonly name: string;
+		};
+
+		expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
+	});
+
+	it("should get primitive number type from Date", () => {
+		type actualPrimitives = Primitives<Step>;
+
+		type expectedPrimitives = {
+			readonly name: string;
+			readonly publishedAt: number;
 		};
 
 		expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
