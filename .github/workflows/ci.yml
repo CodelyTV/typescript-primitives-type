@@ -1,40 +1,27 @@
 # yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: CI
-
 on:
   push:
     branches:
       - main
   pull_request:
-
 jobs:
   lint-test:
     name: 🚀 Lint and test
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    strategy:
-      matrix:
-        node: [ 18, 20 ]
-
     steps:
-      - name: 👍 Checkout
-        uses: actions/checkout@v4
-
-      - name: 🐢 Setup node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
-          cache: 'npm'
-
+          node-version: lts/*
+          cache: npm
       - name: 📥 Install dependencies
         run: npm install
-
       - name: 💅 Lint code style
         run: npm run lint
-
       - name: ✅ Run tests
         run: npm run test
-
   publish:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     name: 📦 Publish
@@ -47,7 +34,6 @@ jobs:
       pull-requests: write
       # Needed by `npm publish --provenance`
       id-token: write
-
     steps:
       - name: 🍄 Bump package version, create GitHub release, and update changelog
         uses: googleapis/release-please-action@v4
