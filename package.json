@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "eslint --ignore-path .gitignore . --ext .ts",
+    "lint": "eslint src tests",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
@@ -33,14 +33,11 @@
   "homepage": "https://github.com/CodelyTV/typescript-primitives-type#readme",
   "devDependencies": {
     "@types/jest": "^27.5.2",
-    "@typescript-eslint/eslint-plugin": "^5.21.0",
-    "@typescript-eslint/parser": "^5.21.0",
-    "eslint": "^8.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^26.1.5",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.15.0",
+    "@typescript-eslint/parser": "^8.15.0",
+    "eslint": "^8.56.0",
+    "eslint-config-codely": "^4.2.0",
+    "eslint-import-resolver-typescript": "^3.7.0",
     "expect-type": "^0.13.0",
     "jest": "^28.0.1",
     "prettier": "^2.6.2",
