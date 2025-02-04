@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.0](https://github.com/CodelyTV/typescript-primitives-type/compare/v1.2.0...v2.0.0) (2025-02-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* convert Date type to number ([#18](https://github.com/CodelyTV/typescript-primitives-type/issues/18))
+
 ## [1.2.0](https://github.com/CodelyTV/typescript-primitives-type/compare/primitives-type-v1.1.1...primitives-type-v1.2.0) (2025-02-04)
 
 ### Features
