@@ -1,7 +1,7 @@
 export abstract class StringValueObject {
-  constructor(readonly value: string) {}
+	constructor(readonly value: string) {}
 
-  toString(): string {
-    return this.value;
-  }
+	toString(): string {
+		return this.value;
+	}
 }
