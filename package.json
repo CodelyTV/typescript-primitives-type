@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "eslint src tests",
+    "lint": "eslint src tests eslint.config.mjs jest.config.js",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
