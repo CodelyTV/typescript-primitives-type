@@ -1,6 +1,7 @@
 import { expectTypeOf } from "expect-type";
 
 import { Primitives } from "../src";
+import { ISODateTime } from "../src/Primitives";
 import { Course } from "./Course";
 import { DeliveryInfo } from "./DeliveryInfo";
 import { Learner } from "./Learner";
@@ -70,12 +71,12 @@ describe("Primitives", () => {
 		expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
 	});
 
-	it("should get primitive number type from Date", () => {
+	it("should get primitive ISO string type from Date", () => {
 		type actualPrimitives = Primitives<Step>;
 
 		type expectedPrimitives = {
 			readonly name: string;
-			readonly publishedAt: number;
+			readonly publishedAt: ISODateTime;
 		};
 
 		expectTypeOf<actualPrimitives>().toEqualTypeOf<expectedPrimitives>();
