@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/CodelyTV/typescript-primitives-type/compare/v3.0.2...v3.1.0) (2025-04-25)
+
+
+### Features
+
+* export iso date time ([#27](https://github.com/CodelyTV/typescript-primitives-type/issues/27)) ([bd0c4b6](https://github.com/CodelyTV/typescript-primitives-type/commit/bd0c4b6a54fa64194db753f0c72295eb9d5954a2))
+
 ## [3.0.2](https://github.com/CodelyTV/typescript-primitives-type/compare/v3.0.1...v3.0.2) (2025-04-25)
 
 
