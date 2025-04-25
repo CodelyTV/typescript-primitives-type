@@ -1,3 +1,3 @@
-import { Primitives } from "./Primitives";
+import { ISODateTime, Primitives } from "./Primitives";
 
-export { Primitives };
+export { ISODateTime, Primitives };
