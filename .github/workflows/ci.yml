@@ -20,8 +20,11 @@ jobs:
         run: npm install
       - name: 💅 Lint code style
         run: npm run lint
+      - name: 💻 Build
+        run: npm run build
       - name: ✅ Run tests
         run: npm run test
+
   publish:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     name: 📦 Publish
