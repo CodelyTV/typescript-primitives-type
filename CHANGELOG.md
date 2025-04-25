@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/CodelyTV/typescript-primitives-type/compare/v3.0.0...v3.0.1) (2025-04-25)
+
+
+### Bug Fixes
+
+* execute build on ci ([#23](https://github.com/CodelyTV/typescript-primitives-type/issues/23)) ([c7f87e8](https://github.com/CodelyTV/typescript-primitives-type/commit/c7f87e89afe7b247e34d66e047c95212edf3bff2))
+
 ## [3.0.0](https://github.com/CodelyTV/typescript-primitives-type/compare/v2.0.0...v3.0.0) (2025-04-25)
 
 
