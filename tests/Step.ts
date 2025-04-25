@@ -1,4 +1,5 @@
 import { Primitives } from "../src";
+import { ISODateTime } from "../src/Primitives";
 
 export class Step {
 	constructor(
@@ -9,7 +10,7 @@ export class Step {
 	toPrimitives(): Primitives<Step> {
 		return {
 			name: this.name,
-			publishedAt: this.publishedAt.getTime(),
+			publishedAt: this.publishedAt.toISOString() as ISODateTime,
 		};
 	}
 }
