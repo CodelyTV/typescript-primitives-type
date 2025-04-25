@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/CodelyTV/typescript-primitives-type/compare/v3.0.1...v3.0.2) (2025-04-25)
+
+
+### Bug Fixes
+
+* correct readme image ([#25](https://github.com/CodelyTV/typescript-primitives-type/issues/25)) ([7fdd3ef](https://github.com/CodelyTV/typescript-primitives-type/commit/7fdd3efc821e33764ed6ba143293ffae9fb6e2b3))
+
 ## [3.0.1](https://github.com/CodelyTV/typescript-primitives-type/compare/v3.0.0...v3.0.1) (2025-04-25)
 
 
