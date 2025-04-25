@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://codely.com">
-    <img src="https://user-images.githubusercontent.com/10558907/170513882-a09eee57-7765-4ca4-b2dd-3c2e061fdad0.png" width="300px" height="92px"/>
+    <img alt="Codely logo" src="https://codely.com/logo/codely_logo.svg">
   </a>
 </p>
 
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  TypeScript utility type in order to ensure to return only properties (not methods) containing values in primitive types such as number or boolean (not Value Objects).
+  TypeScript utility type to ensure to return only properties (not methods) containing values in primitive types such as number or boolean (not Value Objects).
   <br />
   <br />
   Take a look, play and have fun with this.
@@ -54,7 +54,7 @@ When we want to have a `toPrimitives` method in order to pass an instance of the
 That is:
 
 - We want to **avoid including methods** such as the `thisFunctionShouldNotBeIncludedInTheToPrimitives` one, so the transformation should only include properties.
-- We want to **flatten or unwrap encapsulated properties** such as the `courseId` and `courseTitle` ones. They are modelled as Value Objects (`CourseId` and `CourseTitle` classes), so the transformation or flatten should only include properties in a recursive manner.
+- We want to **flatten or unwrap encapsulated properties** such as the `courseId` and `courseTitle` ones. They are modeled as Value Objects (`CourseId` and `CourseTitle` classes), so the transformation or flatten should only include properties in a recursive manner.
 
 That is exactly what our `Primitives<T>` utility type guarantees. Let's add it! 💪
 
